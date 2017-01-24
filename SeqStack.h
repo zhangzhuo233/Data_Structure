@@ -36,7 +36,7 @@ public:
     {
         return top==0;
     }
-    BOOL IsFull()const                          //叛满
+    BOOL IsFull()const                          //判满
     {
          return top==capacity-1;
     }
