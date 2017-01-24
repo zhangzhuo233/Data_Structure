@@ -74,7 +74,7 @@ Type SeqStack<Type>::GetTop()const
          cout<<"There is no element!"<<endl;
          exit(EXIT_FAILURE);
     }
-    cout<<base[top-1];
+    //cout<<base[top-1];
     return base[top-1];
 }
 template<typename Type>
