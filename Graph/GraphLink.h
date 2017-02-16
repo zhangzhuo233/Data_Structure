@@ -4,6 +4,7 @@
 #pragma once
 
 #include<iostream>
+#include<malloc.h>
 using namespace std;
 
 #define DEFAULT_VERTEX_SIZE 10
@@ -194,12 +195,12 @@ bool GraphLink<Type>::RemoveVertex(const Type &vertex)
 **  1.剔除顶点vertex边链表中所包含顶点中的关于vertex的结点(可以借用RemoveEdage())
 **  2.最后一行覆盖所删除行
         （1）顶点覆盖顶点
-                  1）p保存最后一行的单链表，删除行的顶点指向最后一行的边链表，tmp保存numVertices-1   
-                  2）覆盖顶点    
+                  1）p保存最后一行的单链表，删除行的顶点指向最后一行的边链表，tmp保存numVertices-1
+                  2）覆盖顶点
                   3）与最后一行所关联的结点，将他们所包含的最后一个结点的下标更改成所删除的下标
         (2)边链表覆盖边链表（指向tmp）
 **  3.减少顶点数
-*/   
+*/
     int v = GetPosVertex(vertex);
     if(v == -1)
         return false;
